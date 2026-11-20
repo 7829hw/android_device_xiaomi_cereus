@@ -183,6 +183,10 @@ PRODUCT_PACKAGES += \
     BatteryHealthOverlay \
     FpsInfoOverlay
 
+# Shims
+PRODUCT_PACKAGES += \
+    libshim_propertymap
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
@@ -195,6 +199,12 @@ PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
 # ImsInit hack
 PRODUCT_PACKAGES += \
     ImsInit
+
+# VNDK
+PRODUCT_PACKAGES += \
+    libmedia_helper-v29 \
+    libprotobuf-cpp-lite-v29 \
+    libunwindstack-v29
 
 # Wi-Fi
 PRODUCT_PACKAGES += \
