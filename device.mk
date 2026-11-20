@@ -208,6 +208,11 @@ PRODUCT_PACKAGES += \
 
 # Wi-Fi
 PRODUCT_PACKAGES += \
+    hostapd \
+    hostapd_cli \
+    libwpa_client \
+    wpa_cli \
+    wpa_supplicant \
     TetheringConfigOverlay \
     WifiOverlay
 
