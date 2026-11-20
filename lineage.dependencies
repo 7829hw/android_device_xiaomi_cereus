@@ -1,14 +1,14 @@
 [
   {
     "remote": "github",
-    "repository": "kbt69/android_kernel_xiaomi_mt6765",
+    "repository": "7829hw/android_kernel_xiaomi_mt6765",
     "target_path": "kernel/xiaomi/mt6765",
-    "branch": "10-alps"
+    "branch": "lineage-19.1"
   },
   {
     "remote": "github",
-    "repository": "kbt69/proprietary_vendor_xiaomi",
+    "repository": "7829hw/proprietary_vendor_xiaomi",
     "target_path": "vendor/xiaomi",
-    "branch": "12"
+    "branch": "lineage-19.1"
   }
 ]
