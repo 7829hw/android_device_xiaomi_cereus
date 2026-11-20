@@ -7,8 +7,14 @@
   },
   {
     "remote": "github",
-    "repository": "7829hw/proprietary_vendor_xiaomi",
-    "target_path": "vendor/xiaomi",
+    "repository": "7829hw/proprietary_vendor_xiaomi_cereus",
+    "target_path": "vendor/xiaomi/cereus",
+    "branch": "lineage-19.1"
+  },
+  {
+    "remote": "github",
+    "repository": "7829hw/android_device_mediatek_sepolicy_vndr",
+    "target_path": "device/mediatek/sepolicy_vndr",
     "branch": "lineage-19.1"
   }
 ]

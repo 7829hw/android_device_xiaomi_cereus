@@ -1,4 +1,4 @@
-# system.prop for mt6765-common
+# Product properties for Redmi 6 (cereus)
 
 # Audio
 PRODUCT_PRODUCT_PROPERTIES  += \
