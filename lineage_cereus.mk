@@ -26,3 +26,10 @@ PRODUCT_NAME := lineage_cereus
 PRODUCT_BRAND := xiaomi
 PRODUCT_MODEL := Redmi 6
 PRODUCT_MANUFACTURER := Xiaomi
+
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    PRIVATE_BUILD_DESC="cereus-user 9 PPR1.180610.011 V11.0.5.0.PCGMIXM release-keys" \
+    TARGET_DEVICE=cereus \
+    TARGET_PRODUCT=cereus
+
+BUILD_FINGERPRINT := xiaomi/cereus/cereus:9/PPR1.180610.011/V11.0.5.0.PCGMIXM:user/release-keys
