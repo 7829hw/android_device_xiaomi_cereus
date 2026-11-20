@@ -33,10 +33,6 @@ TARGET_SCREEN_WIDTH := 720
 # GMS
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
-# VNDK
-PRODUCT_TARGET_VNDK_VERSION := 29
-PRODUCT_EXTRA_VNDK_VERSIONS := 29
-
 # APNs
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/apns-conf.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/apns-conf.xml
@@ -347,5 +343,4 @@ PRODUCT_PACKAGES += \
     WifiOverlay
 
 # Call proprietary blob setup
-$(call inherit-product-if-exists, vendor/xiaomi/certus64/certus64-vendor.mk)
-$(call inherit-product-if-exists, vendor/xiaomi/mt6765-common/mt6765-common-vendor.mk)
+$(call inherit-product, vendor/xiaomi/cereus/cereus-vendor.mk)
