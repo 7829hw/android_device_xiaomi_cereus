@@ -16,6 +16,6 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifneq ($(filter certus64,$(TARGET_DEVICE)),)
+ifeq ($(TARGET_DEVICE),cereus)
 include $(call all-makefiles-under,$(LOCAL_PATH))
 endif

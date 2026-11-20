@@ -15,14 +15,14 @@
 #
 
 # Inherit from device
-$(call inherit-product, device/xiaomi/certus64/device.mk)
+$(call inherit-product, device/xiaomi/cereus/device.mk)
 
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := certus64
-PRODUCT_NAME := lineage_certus64
+PRODUCT_DEVICE := cereus
+PRODUCT_NAME := lineage_cereus
 PRODUCT_BRAND := xiaomi
-PRODUCT_MODEL := Redmi 6 / Redmi 6A
+PRODUCT_MODEL := Redmi 6
 PRODUCT_MANUFACTURER := Xiaomi
