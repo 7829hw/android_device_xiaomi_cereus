@@ -1,0 +1,14 @@
+# Labels for ALPS vendor files and nodes not covered by device/mediatek/sepolicy_vndr
+/(system\/vendor|vendor)/bin/ipsec u:object_r:ipsec_exec:s0
+/(system\/vendor|vendor)/bin/charon u:object_r:charon_exec:s0
+/(system\/vendor|vendor)/bin/starter u:object_r:starter_exec:s0
+/vendor/lib(64)?/libgralloc_extra\.so u:object_r:same_process_hal_file:s0
+/data/vendor/ipsec(/.*)? u:object_r:wod_ipsec_conf_file:s0
+/dev/socket/wod_sim(/.*)? u:object_r:wod_sim_socket:s0
+/dev/socket/wod_dns(/.*)? u:object_r:wod_dns_socket:s0
+/dev/socket/wod_ipsec(/.*)? u:object_r:wod_ipsec_socket:s0
+/data/vendor/ipsec/wo(/.*)? u:object_r:wod_apn_conf_file:s0
+/dev/socket/wod_action(/.*)? u:object_r:wod_action_socket:s0
+/dev/socket/volte_imsa1(/.*)? u:object_r:volte_imsa1_socket:s0
+/dev/socket/volte_imsvt1(/.*)? u:object_r:volte_imsvt1_socket:s0
+/dev/goodix_fp u:object_r:fingerprint_device:s0
