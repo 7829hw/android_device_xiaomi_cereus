@@ -59,12 +59,16 @@ function blob_fixup() {
         vendor/etc/init/em_hidl_user.rc|\
         vendor/etc/init/loghidlvendorservice.rc|\
         vendor/etc/init/md_monitor.rc|\
-        vendor/etc/init/vendor.mediatek.hardware.keymaster_attestation@1.1-service.rc|\
-        vendor/etc/init/vendor.mediatek.hardware.log@1.0-service.rc|\
-        vendor/etc/init/vendor.mediatek.hardware.mms@1.5-service.rc|\
-        vendor/etc/init/vendor.mediatek.hardware.mtkcodecservice@1.1-service.rc)
+        vendor/etc/init/vendor.mediatek.hardware.log@1.0-service.rc)
             # host_init_verifier rejects interfaces it has no HIDL definition for
             sed -i '/^\s*interface vendor\.mediatek\./d' "${2}"
+            ;;
+        vendor/etc/init/vendor.mediatek.hardware.keymaster_attestation@1.1-service.rc|\
+        vendor/etc/init/vendor.mediatek.hardware.mms@1.5-service.rc|\
+        vendor/etc/init/vendor.mediatek.hardware.mtkcodecservice@1.1-service.rc)
+            # Without interface lines these lazy HALs can no longer be started
+            # on demand, so start them with their class instead
+            sed -i -e '/^\s*interface vendor\.mediatek\./d' -e '/^\s*disabled/d' -e '/^\s*oneshot/d' -e '$a\' "${2}"
             ;;
         vendor/etc/init/lbs_hidl_service.rc)
             sed -i 's/\r$//' "${2}"
