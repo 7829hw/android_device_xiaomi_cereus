@@ -70,8 +70,16 @@ endif
 # Init
 PRODUCT_PACKAGES += \
     fstab.enableswap \
+    fstab.mt6765 \
+    init.ago.rc \
+    init.connectivity.rc \
+    init.modem.rc \
+    init.mt6765.rc \
+    init.mt6765.usb.rc \
+    init.project.rc \
+    init.sensor_1_0.rc \
     init.target.rc \
-    ueventd.rc
+    ueventd.mt6765.rc
 
 # Input
 PRODUCT_COPY_FILES += \
