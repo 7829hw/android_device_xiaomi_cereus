@@ -91,8 +91,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/permissions/privapp-permissions-mediatek.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-mediatek.xml \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.hardware.fingerprint.xml \
     $(LOCAL_PATH)/permissions/privapp-permissions-imsinit.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-imsinit.xml \
-    $(LOCAL_PATH)/permissions/product-privapp-permissions-certus.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-certus.xml \
-    $(LOCAL_PATH)/permissions/privapp-permissions-certus.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-certus.xml
+    $(LOCAL_PATH)/permissions/product-privapp-permissions-cereus.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-cereus.xml
 
 # RCS
 PRODUCT_PACKAGES += \
