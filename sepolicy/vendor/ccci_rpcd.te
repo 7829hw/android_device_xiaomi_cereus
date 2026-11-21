@@ -1,0 +1,4 @@
+# The modem queries unset AP properties (ro.miui.customized.region)
+# through ccci_rpcd; they fall back to default_prop, which vendor
+# domains may not read
+dontaudit ccci_rpcd default_prop:file { getattr open read map };

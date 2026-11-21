@@ -1,0 +1,6 @@
+# Boot mode and device tree checks, as for ccci_mdinit
+allow ccci_fsd proc_cmdline:file r_file_perms;
+allow ccci_fsd sysfs_dt_firmware_android:dir search;
+allow ccci_fsd sysfs_dt_firmware_android:file r_file_perms;
+
+get_prop(ccci_fsd, tel_switch_prop)
