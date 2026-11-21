@@ -1,0 +1,3 @@
+# ro.vendor.md_prop_ver, vendor.service.nvram_init
+get_prop(volte_imsm_93, mtk_md_version_prop)
+get_prop(volte_imsm_93, service_nvram_init_prop)
