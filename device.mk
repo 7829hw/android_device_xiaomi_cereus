@@ -239,6 +239,7 @@ endif
 PRODUCT_PACKAGES += \
     fstab.enableswap \
     fstab.mt6765 \
+    fstab.mt6765_ramdisk \
     init.ago.rc \
     init.connectivity.rc \
     init.modem.rc \
