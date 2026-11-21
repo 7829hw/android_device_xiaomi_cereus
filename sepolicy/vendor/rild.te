@@ -1,0 +1,2 @@
+# ro.vendor.md_prop_ver
+get_prop(rild, mtk_md_version_prop)
