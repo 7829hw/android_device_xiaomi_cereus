@@ -211,6 +211,8 @@ vendor/lib64/vendor.mediatek.hardware.audio@5.1.so
 vendor/bin/hw/camerahalserver
 vendor/bin/lib3a.ccu.dm
 vendor/bin/lib3a.ccu.pm
+vendor/bin/libccu_cactus_s5k5e8yx_ofilm_mipi_raw.dm
+vendor/bin/libccu_cactus_s5k5e8yx_ofilm_mipi_raw.pm
 vendor/bin/libccu_cereus_imx486_sunny_mipi_raw.dm
 vendor/bin/libccu_cereus_imx486_sunny_mipi_raw.pm
 vendor/bin/libccu_cereus_ov12a10_ofilm_mipi_raw.dm
@@ -224,6 +226,7 @@ vendor/bin/libccu_cereus_s5k5e8yxaux_ofilm_mipi_raw.pm
 vendor/bin/libccu_cereus_s5k5e8yxaux_sunny_mipi_raw.dm
 vendor/bin/libccu_cereus_s5k5e8yxaux_sunny_mipi_raw.pm
 vendor/etc/init/camerahalserver.rc
+vendor/lib/cactus_s5k5e8yx_ofilm_mipi_raw_tuning.so
 vendor/lib/cereus_imx486_sunny_mipi_raw_tuning.so
 vendor/lib/cereus_ov12a10_ofilm_mipi_raw_tuning.so
 vendor/lib/cereus_s5k5e8yx_ofilm_mipi_raw_tuning.so
@@ -251,6 +254,7 @@ vendor/lib64/cactus_hi556_sunny_mipi_raw_IdxMgr.so
 vendor/lib64/cactus_ov13855_ofilm_mipi_raw_IdxMgr.so
 vendor/lib64/cactus_s5k3l8_sunny_mipi_raw_IdxMgr.so
 vendor/lib64/cactus_s5k5e8yx_ofilm_mipi_raw_IdxMgr.so
+vendor/lib64/cactus_s5k5e8yx_ofilm_mipi_raw_tuning.so
 vendor/lib64/cereus_imx486_sunny_mipi_raw_IdxMgr.so
 vendor/lib64/cereus_imx486_sunny_mipi_raw_tuning.so
 vendor/lib64/cereus_ov12a10_ofilm_mipi_raw_IdxMgr.so
