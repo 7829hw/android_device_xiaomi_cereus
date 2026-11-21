@@ -7,3 +7,6 @@ ctl.vendor.volte_ua        u:object_r:ctl_volte_ua_prop:s0
 vendor.ril.volte.          u:object_r:volte_prop:s0
 ro.vendor.md_apps.         u:object_r:mtk_default_prop:s0
 vendor.md_apps.            u:object_r:mtk_default_prop:s0
+
+# Read by audioserver (system/media audio_config.h)
+ro.vendor.qti.va_aosp.support u:object_r:vendor_audio_prop:s0
