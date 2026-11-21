@@ -1,0 +1,20 @@
+# Goodix fingerprint HAL (libgf_hal.so)
+
+# /data/vendor/goodix: libgf_hal.so creates its subdirectories itself
+allow hal_fingerprint_default fingerprint_vendor_data_file:dir create;
+
+# /data/gf_data and the framework fpdata directory are core data
+typeattribute hal_fingerprint_default data_between_core_and_vendor_violators;
+
+# /data/gf_data/{frr,auth_ratio}_database.db
+allow hal_fingerprint_default gf_data_file:dir rw_dir_perms;
+allow hal_fingerprint_default gf_data_file:file create_file_perms;
+
+# access(W_OK) on /data/system/users/<id>/fpdata before set_active_group
+allow hal_fingerprint_default fingerprintd_data_file:dir write;
+
+# persist.vendor.sys.fp.*
+set_prop(hal_fingerprint_default, vendor_system_prop)
+
+# IGoodixFingerprintDaemon is not in the VINTF manifest and has no client
+dontaudit hal_fingerprint_default default_android_hwservice:hwservice_manager find;

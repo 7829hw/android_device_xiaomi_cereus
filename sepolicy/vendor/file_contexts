@@ -13,3 +13,5 @@
 /dev/socket/volte_imsa1(/.*)? u:object_r:volte_imsa1_socket:s0
 /dev/socket/volte_imsvt1(/.*)? u:object_r:volte_imsvt1_socket:s0
 /dev/goodix_fp u:object_r:fingerprint_device:s0
+/data/vendor/goodix(/.*)? u:object_r:fingerprint_vendor_data_file:s0
+/data/gf_data(/.*)? u:object_r:gf_data_file:s0

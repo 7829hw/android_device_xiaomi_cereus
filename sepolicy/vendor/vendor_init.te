@@ -1,0 +1,2 @@
+# /data/gf_data (init.project.rc)
+allow vendor_init gf_data_file:dir { create getattr setattr };
