@@ -1,0 +1,2 @@
+# persist.vendor.camera.privapp.list (CameraDeviceClient)
+get_prop(cameraserver, vendor_persist_camera_prop)
