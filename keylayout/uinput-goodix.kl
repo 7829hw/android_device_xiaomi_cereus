@@ -1,0 +1,2 @@
+# Goodix fingerprint HAL navigation device.
+# Map no keys so that touching the sensor does not act as a button.
