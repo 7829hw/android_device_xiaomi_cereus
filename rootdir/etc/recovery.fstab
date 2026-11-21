@@ -4,3 +4,4 @@
 /dev/block/platform/bootdevice/by-name/cache    /cache    ext4 noatime,nosuid,nodev,noauto_da_alloc,discard wait,check
 /dev/block/platform/bootdevice/by-name/boot     /boot     emmc defaults defaults
 /dev/block/platform/bootdevice/by-name/recovery /recovery emmc defaults defaults
+/dev/block/platform/bootdevice/by-name/para     /misc     emmc defaults defaults
