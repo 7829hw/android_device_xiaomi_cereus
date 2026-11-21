@@ -1,0 +1,10 @@
+# MTK video codecs: libbwc looks up /sys/bus/platform/drivers/emi_ctrl
+allow mediacodec sysfs_bus:dir search;
+allow mediacodec sysfs_emi_ctrl:dir search;
+
+get_prop(mediacodec, mtk_venc_h264_showlog_prop)
+get_prop(mediacodec, vendor_vt_prop)
+
+# Unset MTK debug switches fall back to default_prop, which vendor
+# domains may not read
+dontaudit mediacodec default_prop:file { getattr open read map };
