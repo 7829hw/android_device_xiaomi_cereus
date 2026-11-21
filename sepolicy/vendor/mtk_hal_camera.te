@@ -1,0 +1,8 @@
+# Flash: /sys/class/power_supply/battery/voltage_now
+allow mtk_hal_camera sysfs_batteryinfo:dir search;
+allow mtk_hal_camera sysfs_batteryinfo:file r_file_perms;
+
+get_prop(mtk_hal_camera, mtk_default_prop)
+
+# Unset MTK camera debug switches fall back to default_prop
+dontaudit mtk_hal_camera default_prop:file { getattr open read map };
