@@ -1,0 +1,3 @@
+# wfca runs as root and opens /sys/power/wake_lock (radio:wakelock 0660)
+# without being in the wakelock group; dac_override is neverallowed
+dontaudit wfca self:capability dac_override;
