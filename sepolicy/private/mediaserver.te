@@ -1,0 +1,2 @@
+# MediaCodec::isHandheld() looks up package_native when recording starts
+allow mediaserver package_native_service:service_manager find;
