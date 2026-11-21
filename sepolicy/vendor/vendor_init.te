@@ -1,5 +1,5 @@
 # /data/gf_data (init.project.rc)
-allow vendor_init gf_data_file:dir { create getattr setattr };
+allow vendor_init gf_data_file:dir { create getattr setattr open read ioctl };
 
 # Property triggers in android.hardware.bluetooth@1.0-service-mediatek.rc
 get_prop(vendor_init, vts_status_prop)
