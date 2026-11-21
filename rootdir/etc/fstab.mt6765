@@ -10,7 +10,7 @@
 
 /dev/block/platform/bootdevice/by-name/vendor /vendor ext4 ro wait,,avb,first_stage_mount
 # 140 "vendor/mediatek/proprietary/hardware/fstab/mt6765/fstab.in.mt6765"
-/dev/block/platform/bootdevice/by-name/userdata /data f2fs noatime,nosuid,nodev,discard,reserve_root=32768,resgid=1065 wait,check,quota,formattable,encryptable=/dev/block/platform/bootdevice/by-name/metadata
+/dev/block/platform/bootdevice/by-name/userdata /data f2fs noatime,nosuid,nodev,discard,reserve_root=32768,resgid=1065 wait,check,quota,formattable,fileencryption=aes-256-xts:aes-256-cts:v1
 
 /dev/block/platform/bootdevice/by-name/cache /cache ext4 noatime,nosuid,nodev,noauto_da_alloc,discard wait,check,formattable
 
