@@ -1,0 +1,20 @@
+//
+// Copyright (C) 2026 The LineageOS Project
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+
+cc_binary {
+    name: "vendor.mediatek.hardware.mtkcodecservice@1.1-service",
+    defaults: ["hidl_defaults"],
+    relative_install_path: "hw",
+    init_rc: ["vendor.mediatek.hardware.mtkcodecservice@1.1-service.rc"],
+    srcs: ["service.cpp"],
+    shared_libs: [
+        "libhidlbase",
+        "liblog",
+        "libutils",
+    ],
+    compile_multilib: "32",
+    vendor: true,
+}
