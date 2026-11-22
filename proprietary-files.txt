@@ -1128,6 +1128,3 @@ vendor/etc/init/loghidlvendorservice.rc
 vendor/etc/init/vendor.mediatek.hardware.log@1.0-service.rc
 vendor/etc/partition_permission.sh
 vendor/lib64/vendor.mediatek.hardware.log@1.0.so
-
-# Kernel modules
-vendor/lib/modules/fpsgo.ko
