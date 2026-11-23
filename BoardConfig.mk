@@ -52,6 +52,10 @@ TARGET_SCREEN_DENSITY := 320
 # HIDL
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
 DEVICE_MATRIX_FILE := $(DEVICE_PATH)/compatibility_matrix.xml
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
+    $(DEVICE_PATH)/framework_compatibility_matrix.xml \
+    hardware/mediatek/vintf/mediatek_framework_compatibility_matrix.xml \
+    hardware/mediatek/vintf/mediatek_framework_compatibility_matrix_aidl.xml
 
 # Kernel
 BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2
