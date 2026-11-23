@@ -48,16 +48,20 @@ blob_fixups: blob_fixups_user_type = {
     ): blob_fixup()
         .replace_needed('libunwindstack.so', 'libunwindstack-v29.so'),
     (
-        'vendor/lib/hw/audio.primary.mt6765.so',
-        'vendor/lib/hw/sound_trigger.primary.mt6765.so',
         'vendor/lib/libaudioprimarydevicehalifclient.so',
         'vendor/lib/libspeechparser_vendor.so',
-        'vendor/lib64/hw/audio.primary.mt6765.so',
-        'vendor/lib64/hw/sound_trigger.primary.mt6765.so',
         'vendor/lib64/libaudioprimarydevicehalifclient.so',
         'vendor/lib64/libspeechparser_vendor.so',
     ): blob_fixup()
         .replace_needed('libmedia_helper.so', 'libmedia_helper-v29.so'),
+    (
+        'vendor/lib/hw/audio.primary.mt6765.so',
+        'vendor/lib/hw/sound_trigger.primary.mt6765.so',
+        'vendor/lib64/hw/audio.primary.mt6765.so',
+        'vendor/lib64/hw/sound_trigger.primary.mt6765.so',
+    ): blob_fixup()
+        .replace_needed('libmedia_helper.so', 'libmedia_helper-v29.so')
+        .remove_needed('android.hardware.bluetooth.a2dp@1.0.so'),
     (
         'vendor/lib/libmtkcam_stdutils.so',
         'vendor/lib64/libmtkcam_stdutils.so',
