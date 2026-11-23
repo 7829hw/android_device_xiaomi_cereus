@@ -48,12 +48,10 @@ blob_fixups: blob_fixups_user_type = {
     ): blob_fixup()
         .replace_needed('libunwindstack.so', 'libunwindstack-v29.so'),
     (
-        'vendor/lib/hw/android.hardware.audio@5.0-impl-mediatek.so',
         'vendor/lib/hw/audio.primary.mt6765.so',
         'vendor/lib/hw/sound_trigger.primary.mt6765.so',
         'vendor/lib/libaudioprimarydevicehalifclient.so',
         'vendor/lib/libspeechparser_vendor.so',
-        'vendor/lib64/hw/android.hardware.audio@5.0-impl-mediatek.so',
         'vendor/lib64/hw/audio.primary.mt6765.so',
         'vendor/lib64/hw/sound_trigger.primary.mt6765.so',
         'vendor/lib64/libaudioprimarydevicehalifclient.so',
