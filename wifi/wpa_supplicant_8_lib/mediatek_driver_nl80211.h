@@ -21,8 +21,8 @@
 
 #include <linux/wireless.h>
 
-#ifndef BITS
-#define BITS(m,n) (~(BIT(m)-1) & ((BIT(n) - 1) | BIT(n)))
+#ifndef MTK_BITS
+#define MTK_BITS(m,n) (~(BIT(m)-1) & ((BIT(n) - 1) | BIT(n)))
 #endif
 
 enum nl80211_testmode_sta_link_statistics_attr {
