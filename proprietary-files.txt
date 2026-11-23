@@ -607,13 +607,7 @@ vendor/thh/ta/d78d338b1ac349e09f65f4efe179739d.ta
 vendor/thh/ta/d91f322ad5a441d5955110eda3272fc0.ta
 
 # Lights
-vendor/bin/hw/android.hardware.light@2.0-service-mediatek
-vendor/etc/init/android.hardware.light@2.0-service-mediatek.rc
-vendor/lib/hw/android.hardware.light@2.0-impl-mediatek.so
-vendor/lib/hw/lights.mt6765.so
 vendor/lib/librgbwlightsensor.so
-vendor/lib64/hw/android.hardware.light@2.0-impl-mediatek.so
-vendor/lib64/hw/lights.mt6765.so
 vendor/lib64/librgbwlightsensor.so
 
 # Media (OMX / codecs)

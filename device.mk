@@ -102,7 +102,6 @@ PRODUCT_PACKAGES += \
     android.hardware.gnss@1.0.vendor \
     android.hardware.gnss@1.1.vendor \
     android.hardware.gnss@2.0.vendor \
-    android.hardware.light@2.0.vendor \
     android.hardware.neuralnetworks@1.0.vendor \
     android.hardware.neuralnetworks@1.1.vendor \
     android.hardware.neuralnetworks@1.2.vendor \
@@ -136,6 +135,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@3.0-impl \
     android.hardware.keymaster@3.0-service
+
+# Lights
+PRODUCT_PACKAGES += \
+    android.hardware.light-service.lineage
 
 # Media
 PRODUCT_PACKAGES += \
