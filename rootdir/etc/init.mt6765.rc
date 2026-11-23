@@ -23,11 +23,6 @@ on early-init
     chmod 0755 /sys/kernel/debug
 
 on init
-    # create io boost group
-    mkdir /dev/stune/io
-    chown root system /dev/stune/io
-    chown root system /dev/stune/io/tasks
-    chmod 0664 /dev/stune/io/tasks
 
     # Support legacy paths
     symlink /sdcard /mnt/sdcard
@@ -133,13 +128,6 @@ on fs
 
 on post-fs
     write /proc/bootprof "INIT:post-fs"
-
-    # boot perf. tune
-    write /proc/perfmgr/boost_ctrl/eas_ctrl/boot_boost "0 100"
-    write /proc/perfmgr/boost_ctrl/eas_ctrl/boot_boost "1 100"
-    write /proc/perfmgr/boost_ctrl/eas_ctrl/boot_boost "2 100"
-    write /proc/perfmgr/boost_ctrl/eas_ctrl/boot_boost "3 100"
-    write /proc/sys/kernel/sched_stune_task_threshold 0
 
     # Support legacy paths
     symlink /sdcard /storage/sdcard0
@@ -760,46 +748,14 @@ on boot
     chmod 0660 /proc/cpufreq/enable_hw_gov
 
 # BW monitor
-    chown system system /proc/fliperfs/cg_enable
-    chmod 0664 /proc/fliperfs/cg_enable
-    chown system system /proc/fliperfs/cg_threshold
-    chmod 0664 /proc/fliperfs/cg_threshold
-    chown system system /proc/fliperfs/cg_threshold_ddr3
-    chmod 0664 /proc/fliperfs/cg_threshold_ddr3
-    chown system system /proc/fliperfs/perf
-    chmod 0664 /proc/fliperfs/perf
 
 # perfmgr
-    chown system system /proc/perfmgr/smart/smart_uevent_enable
-    chmod 0660 /proc/perfmgr/smart/smart_uevent_enable
-    chown system system /proc/perfmgr/smart/smart_force_isolate
-    chmod 0660 /proc/perfmgr/smart/smart_force_isolate
-    chown system system /proc/perfmgr/smart/app_is_sports
-    chmod 0660 /proc/perfmgr/smart/app_is_sports
-    chown system system /proc/perfmgr/smart/app_is_running
-    chmod 0660 /proc/perfmgr/smart/app_is_running
-    chown system system /proc/perfmgr/boost/cpuset_pid
-    chmod 0660 /proc/perfmgr/boost/cpuset_pid
-    chown system system /proc/perfmgr/eas/perfserv_ta_boost
-    chmod 0660 /proc/perfmgr/eas/perfserv_ta_boost
-    chown system system /proc/perfmgr/eas/perfserv_fg_boost
-    chmod 0660 /proc/perfmgr/eas/perfserv_fg_boost
-    chown system system /proc/perfmgr/eas/perfserv_bg_boost
-    chmod 0660 /proc/perfmgr/eas/perfserv_bg_boost
-    chown system system /sys/devices/system/cpu/eas/stune_task_thresh
-    chmod 0660 /sys/devices/system/cpu/eas/stune_task_thresh
     chown system system /sys/module/ged/parameters/gx_force_cpu_boost
     chmod 0660 /sys/module/ged/parameters/gx_force_cpu_boost
     chown system system /sys/devices/system/cpu/eas/enable
     chmod 0660 /sys/devices/system/cpu/eas/enable
     chown system system /sys/module/ged/parameters/gx_top_app_pid
     chmod 0660 /sys/module/ged/parameters/gx_top_app_pid
-    chown system system /proc/perfmgr/fbc
-    chmod 0664 /proc/perfmgr/fbc
-    chown system system /proc/perfmgr/legacy/perfserv_core
-    chmod 0664 /proc/perfmgr/legacy/perfserv_core
-    chown system system /proc/perfmgr/legacy/perfserv_freq
-    chmod 0664 /proc/perfmgr/legacy/perfserv_freq
     chown system system /sys/module/ged/parameters/gx_3D_benchmark_on
     chmod 0664 /sys/module/ged/parameters/gx_3D_benchmark_on
     chown system system /dev/cpuset/user_space_global_cpuset
@@ -808,42 +764,10 @@ on boot
     chmod 0664 /dev/cpuset/cpus
     chown system system /dev/cpuset/top-app/cpus
     chmod 0664 /dev/cpuset/top-app/cpus
-    chown system system /dev/stune/top-app/schedtune.prefer_idle
-    chmod 0664 /dev/stune/top-app/schedtune.prefer_idle
-    chown system system /sys/kernel/debug/fpsgo/common/fpsgo_game_enable
-    chmod 0664 /sys/kernel/debug/fpsgo/common/fpsgo_game_enable
-    chown system system /proc/fbt_cpu/switch_fbt
-    chmod 0664 /proc/fbt_cpu/switch_fbt
-    chown system system /sys/kernel/debug/fpsgo/fstb/fstb_level
-    chmod 0664 /sys/kernel/debug/fpsgo/fstb/fstb_level
-    chown system system /sys/kernel/debug/fpsgo/fstb/fstb_tune_error_threshold
-    chmod 0664 /sys/kernel/debug/fpsgo/fstb/fstb_tune_error_threshold
-    chown system system /sys/kernel/debug/fpsgo/fstb/fstb_tune_quantile
-    chmod 0664 /sys/kernel/debug/fpsgo/fstb/fstb_tune_quantile
-    chown system system /sys/kernel/debug/fpsgo/fstb/fstb_tune_window_size
-    chmod 0664 /sys/kernel/debug/fpsgo/fstb/fstb_tune_window_size
-    chown system system /sys/kernel/debug/fpsgo/fstb/fstb_tune_lpp_freq
-    chmod 0664 /sys/kernel/debug/fpsgo/fstb/fstb_tune_lpp_freq
-    chown system system /sys/kernel/debug/fpsgo/fstb/fstb_tune_lpp_fps
-    chmod 0664 /sys/kernel/debug/fpsgo/fstb/fstb_tune_lpp_fps
-    chown system system /sys/kernel/debug/fpsgo/fstb/fstb_tune_force_vag
-    chmod 0664 /sys/kernel/debug/fpsgo/fstb/fstb_tune_force_vag
-    chown system system /sys/module/fbt_cpu/parameters/floor_bound
-    chmod 0664 /sys/module/fbt_cpu/parameters/floor_bound
-    chown system system /sys/module/fbt_cpu/parameters/kmin
-    chmod 0664 /sys/module/fbt_cpu/parameters/kmin
-    chown system system /proc/fbt_cpu/switch_cpuset
-    chmod 0664 /proc/fbt_cpu/switch_cpuset
     chown system system /proc/perfmgr/boost_ctrl/cpu_ctrl/perfserv_freq
     chmod 0664 /proc/perfmgr/boost_ctrl/cpu_ctrl/perfserv_freq
-    chown system system /proc/perfmgr/boost_ctrl/eas_ctrl/perfserv_ta_boost
-    chmod 0660 /proc/perfmgr/boost_ctrl/eas_ctrl/perfserv_ta_boost
-    chown system system /proc/perfmgr/boost_ctrl/eas_ctrl/perfserv_fg_boost
-    chmod 0660 /proc/perfmgr/boost_ctrl/eas_ctrl/perfserv_fg_boost
-    chown system system /proc/perfmgr/boost_ctrl/eas_ctrl/perfserv_bg_boost
-    chmod 0660 /proc/perfmgr/boost_ctrl/eas_ctrl/perfserv_bg_boost
     chown system system /proc/perfmgr/boost_ctrl/dram_ctrl/ddr
-    chmod 0660 /proc/perfmgr/boost_ctrl/eas_ctrl/dram_ctrl/ddr
+    chmod 0660 /proc/perfmgr/boost_ctrl/dram_ctrl/ddr
 
  
 ##Netlog tool
@@ -879,11 +803,6 @@ on boot
     chown system radio /dev/ttyGS0
     chmod 660 /dev/ttyGS1
     chown system radio /dev/ttyGS1
-
-on property:ro.board.platform=mt6753
-    chown system system /sys/devices/system/cpu/cpufreq/interactive/hispeed_freq
-    chmod 0660 /sys/devices/system/cpu/cpufreq/interactive/hispeed_freq
-    write /sys/devices/system/cpu/cpufreq/interactive/hispeed_freq 1300000
 
 on property:vold.decrypt=trigger_reset_main
     write /proc/bootprof "INIT:vold.decrypt=trigger_reset_main"
@@ -956,31 +875,14 @@ on property:sys.boot_completed=1
 
 # start EAS+
 on property:sys.boot_completed=1
-    write /dev/stune/schedtune.boost 0
-    write /dev/stune/foreground/schedtune.boost 0
-    write /dev/stune/background/schedtune.boost 0
-    write /dev/stune/top-app/schedtune.boost 0
-    write /dev/stune/rt/schedtune.boost 0
     write /sys/devices/system/cpu/eas/enable 2
-    write /proc/cpufreq/cpufreq_sched_disable 0
-    chown system system /dev/stune/foreground/schedtune.prefer_idle
-    chown system system /dev/stune/top-app/schedtune.prefer_idle
-    chown system system /dev/stune/rt/schedtune.prefer_idle
-    write /dev/stune/foreground/schedtune.prefer_idle 0
-    write /dev/stune/top-app/schedtune.prefer_idle 0
-    write /dev/stune/rt/schedtune.prefer_idle 0
     write /proc/sys/kernel/sched_migration_cost_ns 200000
 
-    # switch to sched-dvfs
-    write /sys/devices/system/cpu/cpufreq/policy0/scaling_governor "schedplus"
-    write /sys/devices/system/cpu/cpufreq/policy4/scaling_governor "schedplus"
+    # switch to schedutil
+    write /sys/devices/system/cpu/cpufreq/policy0/scaling_governor "schedutil"
+    write /sys/devices/system/cpu/cpufreq/policy4/scaling_governor "schedutil"
 
     # restore perf. parameters
-    write /proc/perfmgr/boost_ctrl/eas_ctrl/boot_boost "0 0"
-    write /proc/perfmgr/boost_ctrl/eas_ctrl/boot_boost "1 0"
-    write /proc/perfmgr/boost_ctrl/eas_ctrl/boot_boost "2 0"
-    write /proc/perfmgr/boost_ctrl/eas_ctrl/boot_boost "3 0"
-    write /proc/sys/kernel/sched_stune_task_threshold "-1"
     write /proc/perfmgr/boost_ctrl/cpu_ctrl/boot_freq "-1 -1 -1 -1"
     write /sys/devices/platform/10012000.dvfsrc/helio-dvfsrc/dvfsrc_req_ddr_opp "-1"
 
