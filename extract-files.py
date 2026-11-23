@@ -36,6 +36,9 @@ blob_fixups: blob_fixups_user_type = {
         # on demand, so start them with their class instead
         .regex_replace(r'(?m)^\s*(interface vendor\.mediatek\.|disabled|oneshot).*\n', '')
         .regex_replace(r'([^\n])\Z', '\\1\n'),
+    'vendor/bin/mnld': blob_fixup()
+        # The MediaTek GNSS library, not external/libmnl
+        .replace_needed('libmnl.so', 'libmnl_mtk.so'),
     'vendor/etc/init/lbs_hidl_service.rc': blob_fixup()
         .regex_replace('\r\n', '\n'),
     (
