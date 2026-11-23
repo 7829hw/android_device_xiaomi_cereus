@@ -86,10 +86,10 @@ bool PropertyMap::tryGetProperty(const String8& key, int32_t& outValue) const {
     }
 
     char* end;
-    int value = strtol(stringValue.string(), &end, 10);
+    int value = strtol(stringValue.c_str(), &end, 10);
     if (*end != '\0') {
-        ALOGW("Property key '%s' has invalid value '%s'.  Expected an integer.", key.string(),
-              stringValue.string());
+        ALOGW("Property key '%s' has invalid value '%s'.  Expected an integer.", key.c_str(),
+              stringValue.c_str());
         return false;
     }
     outValue = value;
@@ -103,10 +103,10 @@ bool PropertyMap::tryGetProperty(const String8& key, float& outValue) const {
     }
 
     char* end;
-    float value = strtof(stringValue.string(), &end);
+    float value = strtof(stringValue.c_str(), &end);
     if (*end != '\0') {
-        ALOGW("Property key '%s' has invalid value '%s'.  Expected a float.", key.string(),
-              stringValue.string());
+        ALOGW("Property key '%s' has invalid value '%s'.  Expected a float.", key.c_str(),
+              stringValue.c_str());
         return false;
     }
     outValue = value;
