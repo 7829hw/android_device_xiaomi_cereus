@@ -499,7 +499,6 @@ vendor/lib/egl/libGLESv1_CM_mtk.so
 vendor/lib/egl/libGLESv2_mtk.so
 vendor/lib/egl/libMEOW_trace.so
 vendor/lib/hw/gralloc.mt6765.so
-vendor/lib/hw/memtrack.mt6765.so
 vendor/lib/hw/vendor.mediatek.hardware.pq@2.3-impl.so
 vendor/lib/hw/vulkan.mt6765.so
 vendor/lib/libIMGegl.so
@@ -536,7 +535,6 @@ vendor/lib64/egl/libGLESv2_mtk.so
 vendor/lib64/egl/libMEOW_trace.so
 vendor/lib64/hw/gralloc.mt6765.so
 vendor/lib64/hw/hwcomposer.mt6765.so
-vendor/lib64/hw/memtrack.mt6765.so
 vendor/lib64/hw/vendor.mediatek.hardware.pq@2.3-impl.so
 vendor/lib64/hw/vulkan.mt6765.so
 vendor/lib64/libIMGegl.so
