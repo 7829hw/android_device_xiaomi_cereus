@@ -59,9 +59,7 @@ PRODUCT_PACKAGES += \
 
 # DRM
 PRODUCT_PACKAGES += \
-    android.hardware.drm@1.0-impl \
-    android.hardware.drm@1.0-service \
-    android.hardware.drm@1.4-service.clearkey
+    android.hardware.drm-service.clearkey
 
 # Gatekeeper
 PRODUCT_PACKAGES += \
@@ -99,9 +97,6 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.device@3.4.vendor \
     android.hardware.camera.device@3.5.vendor \
     android.hardware.camera.provider@2.4.vendor \
-    android.hardware.drm@1.0.vendor \
-    android.hardware.drm@1.1.vendor \
-    android.hardware.drm@1.2.vendor \
     android.hardware.gnss.measurement_corrections@1.0.vendor \
     android.hardware.gnss.visibility_control@1.0.vendor \
     android.hardware.gnss@1.0.vendor \
@@ -337,7 +332,6 @@ PRODUCT_PACKAGES += \
 # VNDK
 PRODUCT_PACKAGES += \
     libmedia_helper-v29 \
-    libprotobuf-cpp-lite-v29 \
     libunwindstack-v29
 
 # Wi-Fi

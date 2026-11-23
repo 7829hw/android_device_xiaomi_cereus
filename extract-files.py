@@ -63,13 +63,6 @@ blob_fixups: blob_fixups_user_type = {
         'vendor/lib64/libmtkcam_stdutils.so',
     ): blob_fixup()
         .add_needed('libshim_propertymap.so'),
-    (
-        'vendor/lib/libwvhidl.so',
-        'vendor/lib/mediadrm/libwvdrmengine.so',
-        'vendor/lib64/libwvhidl.so',
-        'vendor/lib64/mediadrm/libwvdrmengine.so',
-    ): blob_fixup()
-        .replace_needed('libprotobuf-cpp-lite.so', 'libprotobuf-cpp-lite-v29.so'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
