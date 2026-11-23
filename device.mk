@@ -252,6 +252,10 @@ PRODUCT_PACKAGES += \
     init.target.rc \
     ueventd.mt6765.rc
 
+# Keep the USB init script from rootdir instead of the one the
+# hardware/mediatek gadget HAL installs under the same name
+$(call soong_config_set_bool,mediatek_gadget,use_custom_usb_gadget_rc,true)
+
 # Input
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/ACCDET.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/ACCDET.kl \
