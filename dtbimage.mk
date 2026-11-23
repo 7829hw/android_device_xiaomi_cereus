@@ -9,7 +9,7 @@
 # the default concatenation of every dtb, which puts the certus overlay
 # first.
 
-CEREUS_MKDTBOIMG := $(HOST_OUT_EXECUTABLES)/mkdtboimg.py$(HOST_EXECUTABLE_SUFFIX)
+CEREUS_MKDTBOIMG := $(HOST_OUT_EXECUTABLES)/mkdtboimg$(HOST_EXECUTABLE_SUFFIX)
 CEREUS_BASE_DTB := $(DTB_OUT)/arch/$(KERNEL_ARCH)/boot/dts/mediatek/mt6765.dtb
 
 $(DTB_OUT):
