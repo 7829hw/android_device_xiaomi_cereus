@@ -64,9 +64,6 @@ BOARD_KERNEL_SECOND_OFFSET := 0x00e88000
 BOARD_DTB_OFFSET := 0x07808000
 BOARD_BOOT_HEADER_VERSION := 2
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
-# Select clang, LLD and the LLVM binutils from the default prebuilt
-# toolchain; the GNU cross tools are not used.
-TARGET_KERNEL_ADDITIONAL_FLAGS := LLVM=1
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_SOURCE := kernel/xiaomi/mt6765
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
@@ -124,7 +121,6 @@ BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
 
 # Treble
-BOARD_VNDK_VERSION  := current
 TARGET_COPY_OUT_VENDOR := vendor
 TARGET_COPY_OUT_PRODUCT := system/product
 
