@@ -115,10 +115,7 @@ vendor/etc/aurisys_param/Speech_AudioParam.xml
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-mediatek
 vendor/etc/init/android.hardware.bluetooth@1.0-service-mediatek.rc
 vendor/etc/init/init.bt_drv.rc
-vendor/lib/hw/android.hardware.bluetooth.audio@2.0-impl-mediatek.so
 vendor/lib/hw/android.hardware.bluetooth@1.0-impl-mediatek.so
-vendor/lib/hw/audio.bluetooth.default.so
-vendor/lib/libbluetooth_audio_session_mediatek.so
 vendor/lib/libbluetooth_hw_test.so
 vendor/lib/libbluetooth_mtk.so
 vendor/lib/libbluetooth_mtk_pure.so
@@ -127,10 +124,7 @@ vendor/lib/libbluetoothem_mtk.so
 vendor/lib/libbt-vendor.so
 vendor/lib/libcvsd_mtk.so
 vendor/lib/libmsbc_mtk.so
-vendor/lib64/hw/android.hardware.bluetooth.audio@2.0-impl-mediatek.so
 vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-mediatek.so
-vendor/lib64/hw/audio.bluetooth.default.so
-vendor/lib64/libbluetooth_audio_session_mediatek.so
 vendor/lib64/libbluetooth_hw_test.so
 vendor/lib64/libbluetooth_mtk.so
 vendor/lib64/libbluetooth_mtk_pure.so

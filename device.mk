@@ -217,7 +217,8 @@ PRODUCT_COPY_FILES += \
 
 # Bluetooth
 PRODUCT_PACKAGES += \
-    audio.a2dp.default
+    android.hardware.bluetooth.audio-impl \
+    audio.bluetooth.default
 
 # KPOC
 PRODUCT_PACKAGES += \
