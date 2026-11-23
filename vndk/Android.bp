@@ -1,0 +1,57 @@
+//
+// Copyright (C) 2026 The LineageOS Project
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+
+// Android 10 (VNDK 29) copies of VNDK libraries whose ABI changed in
+// Android 12, taken from platform/prebuilts/vndk/v29 with their sonames
+// set to the -v29 names. Blobs are pointed at them with patchelf in
+// extract-files.py.
+
+cc_prebuilt_library_shared {
+    name: "libmedia_helper-v29",
+    vendor: true,
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    shared_libs: [
+        "libc++",
+        "liblog",
+        "libutils",
+    ],
+    target: {
+        android_arm: {
+            srcs: ["v29/arm/libmedia_helper-v29.so"],
+        },
+        android_arm64: {
+            srcs: ["v29/arm64/libmedia_helper-v29.so"],
+        },
+    },
+    compile_multilib: "both",
+}
+
+cc_prebuilt_library_shared {
+    name: "libunwindstack-v29",
+    vendor: true,
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    shared_libs: [
+        "libbase",
+        "libc++",
+        "liblog",
+        "liblzma",
+    ],
+    target: {
+        android_arm: {
+            srcs: ["v29/arm/libunwindstack-v29.so"],
+        },
+        android_arm64: {
+            srcs: ["v29/arm64/libunwindstack-v29.so"],
+        },
+    },
+    compile_multilib: "both",
+}
