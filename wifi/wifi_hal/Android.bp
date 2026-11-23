@@ -1,0 +1,43 @@
+//
+// Copyright (C) 2011 The Android Open Source Project
+// Copyright (C) 2026 The LineageOS Project
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+
+cc_library_static {
+    name: "libwifi-hal-mt66xx",
+    vendor: true,
+    owner: "mtk",
+    cflags: [
+        "-Wno-int-to-pointer-cast",
+        "-Wno-parentheses",
+        "-Wno-unused-parameter",
+    ],
+    cppflags: ["-Wno-conversion-null"],
+    srcs: [
+        "common.cpp",
+        "cpp_bindings.cpp",
+        "wifi_hal.cpp",
+        "wifi_logger.cpp",
+        "wifi_offload.cpp",
+    ],
+    header_libs: ["wifi_legacy_headers"],
+    shared_libs: [
+        "liblog",
+        "libnl",
+        "libutils",
+    ],
+    include_dirs: [
+        "external/libnl/include",
+        "external/wpa_supplicant_8/src/drivers",
+        "hardware/interfaces/wifi/legacy_headers/include/hardware_legacy",
+    ],
+}
+
+// libwifi_hal links the vendor HAL selected by BOARD_WLAN_DEVICE through
+// these defaults.
+cc_defaults {
+    name: "libwifi-hal-mediatek",
+    whole_static_libs: ["libwifi-hal-mt66xx"],
+}
