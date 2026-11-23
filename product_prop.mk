@@ -7,6 +7,10 @@ PRODUCT_PRODUCT_PROPERTIES  += \
    ro.config.system_vol_steps=15 \
    ro.config.ring_notification_vol_steps=15
 
+# BPF
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.bpf.kver_override=5.10.239
+
 # Graphics
 PRODUCT_PRODUCT_PROPERTIES  += \
     debug.sf.enable_gl_backpressure=1
