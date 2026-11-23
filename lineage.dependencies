@@ -3,18 +3,22 @@
     "remote": "github",
     "repository": "7829hw/android_kernel_xiaomi_mt6765",
     "target_path": "kernel/xiaomi/mt6765",
-    "branch": "lineage-19.1"
+    "branch": "lineage-24.0"
   },
   {
     "remote": "github",
     "repository": "7829hw/proprietary_vendor_xiaomi_cereus",
     "target_path": "vendor/xiaomi/cereus",
-    "branch": "lineage-19.1"
+    "branch": "lineage-24.0"
   },
   {
     "remote": "github",
     "repository": "7829hw/android_device_mediatek_sepolicy_vndr",
     "target_path": "device/mediatek/sepolicy_vndr",
-    "branch": "lineage-19.1"
+    "branch": "lineage-24.0"
+  },
+  {
+    "repository": "android_hardware_mediatek",
+    "target_path": "hardware/mediatek"
   }
 ]
