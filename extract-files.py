@@ -16,6 +16,7 @@ from extract_utils.main import (
 
 namespace_imports = [
     'device/xiaomi/cereus',
+    'hardware/mediatek',
 ]
 
 blob_fixups: blob_fixups_user_type = {
@@ -42,11 +43,7 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/etc/init/lbs_hidl_service.rc': blob_fixup()
         .regex_replace('\r\n', '\n'),
     (
-        'vendor/lib/libaedv.so',
-        'vendor/lib/libladder.so',
         'vendor/lib/libudf.so',
-        'vendor/lib64/libaedv.so',
-        'vendor/lib64/libladder.so',
         'vendor/lib64/libudf.so',
     ): blob_fixup()
         .replace_needed('libunwindstack.so', 'libunwindstack-v29.so'),

@@ -2,13 +2,9 @@
 # (vendor fingerprint xiaomi/cereus/cereus:9/PPR1.180610.011/V11.0.5.0.PCGMIXM)
 
 # AEE (libs only; daemons dropped)
-vendor/lib/libaedv.so
 vendor/lib/libdirect-coredump.so
-vendor/lib/libladder.so
 vendor/lib/libudf.so
-vendor/lib64/libaedv.so
 vendor/lib64/libdirect-coredump.so
-vendor/lib64/libladder.so
 vendor/lib64/libudf.so
 
 # Audio - tuning params
