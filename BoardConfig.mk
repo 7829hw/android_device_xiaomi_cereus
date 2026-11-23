@@ -16,6 +16,9 @@
 
 BOARD_VENDOR := xiaomi
 
+# A/B
+AB_OTA_UPDATER := false
+
 DEVICE_PATH := device/xiaomi/cereus
 
 BUILD_BROKEN_DUP_RULES := true
