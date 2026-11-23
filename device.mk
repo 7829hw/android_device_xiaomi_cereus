@@ -348,7 +348,8 @@ PRODUCT_PACKAGES += \
     wpa_cli \
     wpa_supplicant \
     TetheringConfigOverlay \
-    WifiOverlay
+    WifiOverlay \
+    wlan_assistant
 
 # Call proprietary blob setup
 $(call inherit-product, vendor/xiaomi/cereus/cereus-vendor.mk)

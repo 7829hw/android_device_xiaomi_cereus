@@ -934,7 +934,6 @@ vendor/etc/init/android.hardware.usb@1.1-service-mediatek.rc
 # Wi-Fi / Connectivity (WMT)
 vendor/bin/hw/android.hardware.wifi@1.0-service-lazy-mediatek
 vendor/bin/stp_dump3
-vendor/bin/wlan_assistant
 vendor/bin/wmt_launcher
 vendor/bin/wmt_loader
 vendor/etc/init/android.hardware.wifi@1.0-service-lazy-mediatek.rc
@@ -942,7 +941,6 @@ vendor/etc/init/init.fmradio_drv.rc
 vendor/etc/init/init.wlan_drv.rc
 vendor/etc/init/init.wmt_drv.rc
 vendor/etc/init/init_connectivity.rc
-vendor/etc/init/wlan_assistant.rc
 vendor/lib64/libwifi-hal.so
 vendor/lib64/libwifitest.so
 
