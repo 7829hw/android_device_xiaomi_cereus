@@ -63,21 +63,6 @@
       "Multiplier": 0.001
     },
     {
-      "Name": "mtktspa",
-      "Type": "POWER_AMPLIFIER",
-      "HotThreshold": [
-        "NaN",
-        "NaN",
-        "NaN",
-        "NaN",
-        "NaN",
-        "NaN",
-        "NaN"
-      ],
-      "VrThreshold": "NaN",
-      "Multiplier": 0.001
-    },
-    {
       "Name": "mtktscharger",
       "Type": "USB_PORT",
       "HotThreshold": [
