@@ -12,7 +12,11 @@ cc_defaults {
     sanitize: {
         cfi: true,
     },
-    cflags: ["-DCONFIG_ANDROID_LOG"],
+    cflags: [
+        "-DCONFIG_ANDROID_LOG",
+        // hapd is assigned but never read in the vendor source
+        "-Wno-error=unused-but-set-variable",
+    ],
     arch: {
         arm: {
             // To force sizeof(enum) = 4
