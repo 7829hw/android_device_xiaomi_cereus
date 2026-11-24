@@ -41,6 +41,23 @@ blob_fixups: blob_fixups_user_type = {
         # The MediaTek GNSS library, not external/libmnl
         .replace_needed('libmnl.so', 'libmnl_mtk.so')
         .add_needed('libshim_sensors.so'),
+    'vendor/bin/hw/mtkfusionrild': blob_fixup()
+        # Bind libbinder/libhidlbase to AOSP libutils instead of the old
+        # String16 copies in libmtkutils, which librilfusion loads first
+        .add_needed('libutils.so'),
+    (
+        'vendor/bin/dconfig',
+        'vendor/lib/libpowerhal.so',
+        'vendor/lib64/libpowerhal.so',
+    ): blob_fixup()
+        # The blobs reserve the Android 9 sizeof(XMLDocument) on the stack
+        .replace_needed('libtinyxml2.so', 'libtinyxml2-v34.so'),
+    (
+        'vendor/lib/hw/vendor.mediatek.hardware.pq@2.3-impl.so',
+        'vendor/lib64/hw/vendor.mediatek.hardware.pq@2.3-impl.so',
+    ): blob_fixup()
+        # Thread::run() on an object no sp<> owns yet aborts in new libutils
+        .replace_needed('libutils.so', 'libutils-v32.so'),
     'vendor/lib64/libcam.utils.sensorprovider.so': blob_fixup()
         .add_needed('libshim_sensors.so'),
     (

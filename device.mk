@@ -155,7 +155,9 @@ PRODUCT_PACKAGES += \
     libnbaio_mono \
     libsensorndkbridge \
     libtinycompress \
-    libtinyxml
+    libtinyxml \
+    libtinyxml2-v34 \
+    libutils-v32
 
 # Vibrator
 PRODUCT_PACKAGES += \
