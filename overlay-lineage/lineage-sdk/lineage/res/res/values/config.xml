@@ -28,6 +28,10 @@
     <integer name="config_proximityCheckTimeout">100</integer>
     <bool name="config_proximityCheckOnWakeEnabledByDefault">true</bool>
 
+    <!-- Single-color notification and battery light:
+         LIGHTS_PULSATING_LED (8) | LIGHTS_BATTERY_LED (64) -->
+    <integer name="config_deviceLightCapabilities">72</integer>
+
     <!-- The list of vendor package signatures that should also be considered
     platform signatures, specifically for use on devices with a vendor partition. -->
     <string-array name="config_vendorPlatformSignatures">
