@@ -306,12 +306,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/permissions/privapp-permissions-imsinit.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-imsinit.xml \
     $(LOCAL_PATH)/permissions/product-privapp-permissions-cereus.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-cereus.xml
 
-# RCS
-PRODUCT_PACKAGES += \
-    com.android.ims.rcsmanager \
-    PresencePolling \
-    RcsService
-
 # RROs
 PRODUCT_PACKAGES += \
     RoundedCornerFW \
