@@ -17,5 +17,6 @@
 /data/gf_data(/.*)? u:object_r:gf_data_file:s0
 
 # HALs whose stock labels do not cover the names we ship
-/(vendor|system/vendor)/bin/hw/android\.hardware\.audio\.service           u:object_r:mtk_hal_audio_exec:s0
+# No alternation: a plain path outranks the AOSP regex for the same file
+/vendor/bin/hw/android\.hardware\.audio\.service u:object_r:mtk_hal_audio_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.health-service\.mediatek u:object_r:hal_health_default_exec:s0

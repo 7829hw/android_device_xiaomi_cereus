@@ -1,0 +1,1 @@
+allow fuelgauged_nvram proc_cmdline:file r_file_perms;
