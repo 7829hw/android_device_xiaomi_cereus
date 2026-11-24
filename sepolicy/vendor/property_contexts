@@ -10,3 +10,7 @@ vendor.md_apps.            u:object_r:mtk_default_prop:s0
 
 # Read by audioserver (system/media audio_config.h)
 ro.vendor.qti.va_aosp.support u:object_r:vendor_audio_prop:s0
+
+# Thermal HAL
+vendor.thermal.link_ready u:object_r:vendor_thermal_prop:s0 exact bool
+vendor.thermal.config     u:object_r:vendor_thermal_prop:s0 exact string

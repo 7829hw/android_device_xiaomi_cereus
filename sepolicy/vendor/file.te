@@ -4,3 +4,4 @@ allow proc_tp proc:filesystem associate;
 # Goodix fingerprint statistics, at a path hardcoded in libgf_hal.so. It is
 # outside /data/vendor, so it has to be a core data type.
 type gf_data_file, file_type, data_file_type, core_data_file_type;
+type thermal_link_device, dev_type;

@@ -1,0 +1,158 @@
+{
+  "Sensors": [
+    {
+      "Name": "mtktsbattery",
+      "Type": "BATTERY",
+      "HotThreshold": [
+        "NaN",
+        "NaN",
+        "NaN",
+        50.0,
+        "NaN",
+        "NaN",
+        60.0
+      ],
+      "VrThreshold": "NaN",
+      "Multiplier": 0.001
+    },
+    {
+      "Name": "CPU",
+      "Type": "CPU",
+      "ZoneName": "mtktscpu",
+      "HotThreshold": [
+        "NaN",
+        "NaN",
+        "NaN",
+        85.0,
+        "NaN",
+        "NaN",
+        117.0
+      ],
+      "VrThreshold": "NaN",
+      "Multiplier": 0.001
+    },
+    {
+      "Name": "GPU",
+      "Type": "GPU",
+      "ZoneName": "mtktscpu",
+      "HotThreshold": [
+        "NaN",
+        "NaN",
+        "NaN",
+        85.0,
+        "NaN",
+        "NaN",
+        117.0
+      ],
+      "VrThreshold": "NaN",
+      "Multiplier": 0.001
+    },
+    {
+      "Name": "mtktsAP",
+      "Type": "SKIN",
+      "HotThreshold": [
+        "NaN",
+        "NaN",
+        "NaN",
+        50.0,
+        "NaN",
+        "NaN",
+        90.0
+      ],
+      "VrThreshold": "NaN",
+      "Multiplier": 0.001
+    },
+    {
+      "Name": "mtktspa",
+      "Type": "POWER_AMPLIFIER",
+      "HotThreshold": [
+        "NaN",
+        "NaN",
+        "NaN",
+        "NaN",
+        "NaN",
+        "NaN",
+        "NaN"
+      ],
+      "VrThreshold": "NaN",
+      "Multiplier": 0.001
+    },
+    {
+      "Name": "mtktscharger",
+      "Type": "USB_PORT",
+      "HotThreshold": [
+        "NaN",
+        "NaN",
+        "NaN",
+        "NaN",
+        "NaN",
+        "NaN",
+        "NaN"
+      ],
+      "VrThreshold": "NaN",
+      "Multiplier": 0.001
+    }
+  ],
+  "CoolingDevices": [
+    {
+      "Name": "mtk-cl-bcct00",
+      "Type": "BATTERY"
+    },
+    {
+      "Name": "mtk-cl-bcct01",
+      "Type": "BATTERY"
+    },
+    {
+      "Name": "mtk-cl-bcct02",
+      "Type": "BATTERY"
+    },
+    {
+      "Name": "abcct",
+      "Type": "BATTERY"
+    },
+    {
+      "Name": "abcct_lcmoff",
+      "Type": "BATTERY"
+    },
+    {
+      "Name": "mtk-cl-backlight01",
+      "Type": "DISPLAY"
+    },
+    {
+      "Name": "mtk-cl-backlight02",
+      "Type": "DISPLAY"
+    },
+    {
+      "Name": "mtk-cl-backlight03",
+      "Type": "DISPLAY"
+    },
+    {
+      "Name": "mtk-cl-mutt00",
+      "Type": "MODEM"
+    },
+    {
+      "Name": "mtk-cl-mutt01",
+      "Type": "MODEM"
+    },
+    {
+      "Name": "mtk-cl-mutt02",
+      "Type": "MODEM"
+    },
+    {
+      "Name": "mtk-cl-mutt03",
+      "Type": "MODEM"
+    },
+    {
+      "Name": "cpu_adaptive_0",
+      "Type": "CPU"
+    },
+    {
+      "Name": "cpu_adaptive_1",
+      "Type": "CPU"
+    },
+    {
+      "Name": "cpu_adaptive_2",
+      "Type": "CPU"
+    }
+  ]
+}

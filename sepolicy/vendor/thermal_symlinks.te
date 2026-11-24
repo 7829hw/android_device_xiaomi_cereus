@@ -1,0 +1,14 @@
+type thermal_symlinks, domain;
+type thermal_symlinks_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(thermal_symlinks)
+
+allow thermal_symlinks vendor_shell_exec:file rx_file_perms;
+allow thermal_symlinks vendor_toolbox_exec:file rx_file_perms;
+
+r_dir_file(thermal_symlinks, sysfs_thermal)
+r_dir_file(thermal_symlinks, sysfs_therm)
+
+allow thermal_symlinks thermal_link_device:dir rw_dir_perms;
+allow thermal_symlinks thermal_link_device:lnk_file create_file_perms;
+
+set_prop(thermal_symlinks, vendor_thermal_prop)

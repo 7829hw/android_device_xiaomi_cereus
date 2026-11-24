@@ -20,3 +20,8 @@
 # No alternation: a plain path outranks the AOSP regex for the same file
 /vendor/bin/hw/android\.hardware\.audio\.service u:object_r:mtk_hal_audio_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.health-service\.mediatek u:object_r:hal_health_default_exec:s0
+
+# Thermal HAL
+/vendor/bin/hw/android\.hardware\.thermal-service\.mediatek u:object_r:hal_thermal_default_exec:s0
+/vendor/bin/thermal_symlinks_mediatek                     u:object_r:thermal_symlinks_exec:s0
+/dev/thermal(/.*)?                                        u:object_r:thermal_link_device:s0
