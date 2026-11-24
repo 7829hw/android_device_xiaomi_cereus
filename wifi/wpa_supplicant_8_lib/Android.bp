@@ -5,8 +5,8 @@
 // SPDX-License-Identifier: Apache-2.0
 //
 
-cc_library_static {
-    name: "lib_driver_cmd_mt66xx",
+cc_defaults {
+    name: "lib_driver_cmd_mt66xx_defaults",
     vendor: true,
     owner: "mtk",
     sanitize: {
@@ -33,5 +33,24 @@ cc_library_static {
         "external/wpa_supplicant_8/src/utils",
         "external/wpa_supplicant_8/src/wps",
         "external/wpa_supplicant_8/wpa_supplicant",
+    ],
+}
+
+// The library uses the drivers' and the daemons' structs, whose layout
+// depends on the CONFIG_* flags, so build it once with the flags of each.
+cc_library_static {
+    name: "lib_driver_cmd_mt66xx",
+    defaults: [
+        "lib_driver_cmd_mt66xx_defaults",
+        "wpa_supplicant_cflags_default",
+        "wpa_supplicant_usd_defaults",
+    ],
+}
+
+cc_library_static {
+    name: "lib_driver_cmd_mt66xx_hostapd",
+    defaults: [
+        "lib_driver_cmd_mt66xx_defaults",
+        "hostapd_cflags_default",
     ],
 }
