@@ -1082,3 +1082,7 @@ vendor/bin/loghidlvendorservice
 vendor/etc/init/loghidlvendorservice.rc
 vendor/etc/init/vendor.mediatek.hardware.log@1.0-service.rc
 vendor/etc/partition_permission.sh
+
+# DRM (Widevine L3, AIDL) - from TheMuppets/proprietary_vendor_nokia_sdm660-common lineage-24.0 (HON660 96.00.05)
+vendor/bin/hw/android.hardware.drm-service.widevine|dbc47d0c8f32fe5a3e37667e8f6dd5ffa6921801
+vendor/lib64/libwvaidl.so|a9365542ffe4db4578488993c8fc3453f1d8dabd
