@@ -769,6 +769,10 @@ on boot
     chown system system /proc/perfmgr/boost_ctrl/dram_ctrl/ddr
     chmod 0660 /proc/perfmgr/boost_ctrl/dram_ctrl/ddr
 
+    # Charging control (vendor.lineage.health)
+    chown system system /proc/mtk_battery_cmd/current_cmd
+    chmod 0664 /proc/mtk_battery_cmd/current_cmd
+
  
 ##Netlog tool
    #change permissions about terminal

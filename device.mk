@@ -79,7 +79,13 @@ PRODUCT_PACKAGES += \
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health-service.mediatek \
-    android.hardware.health-service.mediatek-recovery
+    android.hardware.health-service.mediatek-recovery \
+    vendor.lineage.health-service.default
+
+# Charging control: "0 1" > current_cmd stops charging, "0 0" resumes it
+$(call soong_config_set,lineage_health,charging_control_charging_path,/proc/mtk_battery_cmd/current_cmd)
+$(call soong_config_set,lineage_health,charging_control_charging_enabled,0 0)
+$(call soong_config_set,lineage_health,charging_control_charging_disabled,0 1)
 
 # HIDL
 PRODUCT_PACKAGES += \
