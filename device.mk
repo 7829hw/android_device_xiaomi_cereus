@@ -37,6 +37,12 @@ PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/apns-conf.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/apns-conf.xml
 
+# ART
+# The 4.9 kernel has no userfaultfd, so the runtime falls back to the CC
+# collector. Build the boot image and preopt for it as well, otherwise the
+# device recompiles the boot image and rejects every preopted app.
+PRODUCT_ENABLE_UFFD_GC := false
+
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio.effect@7.0-impl \
