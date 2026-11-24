@@ -63,6 +63,9 @@ DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
 # ION
 $(call soong_config_set_bool,libion,legacy_impl,true)
 
+# Graphics
+$(call soong_config_set_bool,libui,legacy_gralloc,true)
+
 # Kernel
 BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2
 BOARD_KERNEL_BASE := 0x40078000
