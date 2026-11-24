@@ -15,3 +15,7 @@
 /dev/goodix_fp u:object_r:fingerprint_device:s0
 /data/vendor/goodix(/.*)? u:object_r:fingerprint_vendor_data_file:s0
 /data/gf_data(/.*)? u:object_r:gf_data_file:s0
+
+# HALs whose stock labels do not cover the names we ship
+/(vendor|system/vendor)/bin/hw/android\.hardware\.audio\.service           u:object_r:mtk_hal_audio_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.health-service\.mediatek u:object_r:hal_health_default_exec:s0
