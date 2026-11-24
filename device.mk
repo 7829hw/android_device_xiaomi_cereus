@@ -319,7 +319,9 @@ PRODUCT_PACKAGES += \
 
 # Shims
 PRODUCT_PACKAGES += \
-    libshim_propertymap
+    libshim_base \
+    libshim_propertymap \
+    libshim_sensors
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \

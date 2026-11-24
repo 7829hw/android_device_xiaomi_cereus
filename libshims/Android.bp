@@ -14,3 +14,27 @@ cc_library_shared {
     compile_multilib: "both",
     vendor: true,
 }
+
+cc_library_shared {
+    name: "libshim_base",
+    srcs: ["base/Basename.cpp"],
+    shared_libs: ["libbase"],
+    compile_multilib: "both",
+    vendor: true,
+}
+
+cc_library_shared {
+    name: "libshim_sensors",
+    whole_static_libs: ["android.hardware.sensors@1.0-convert"],
+    shared_libs: [
+        "android.hardware.sensors@1.0",
+        "libbase",
+        "libcutils",
+        "libhardware",
+        "libhidlbase",
+        "liblog",
+        "libutils",
+    ],
+    compile_multilib: "both",
+    vendor: true,
+}

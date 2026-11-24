@@ -39,7 +39,17 @@ blob_fixups: blob_fixups_user_type = {
         .regex_replace(r'([^\n])\Z', '\\1\n'),
     'vendor/bin/mnld': blob_fixup()
         # The MediaTek GNSS library, not external/libmnl
-        .replace_needed('libmnl.so', 'libmnl_mtk.so'),
+        .replace_needed('libmnl.so', 'libmnl_mtk.so')
+        .add_needed('libshim_sensors.so'),
+    'vendor/lib64/libcam.utils.sensorprovider.so': blob_fixup()
+        .add_needed('libshim_sensors.so'),
+    (
+        'vendor/lib/libnvram.so',
+        'vendor/lib/libsysenv.so',
+        'vendor/lib64/libnvram.so',
+        'vendor/lib64/libsysenv.so',
+    ): blob_fixup()
+        .add_needed('libshim_base.so'),
     'vendor/etc/init/lbs_hidl_service.rc': blob_fixup()
         .regex_replace('\r\n', '\n'),
     (
