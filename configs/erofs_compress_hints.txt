@@ -1,0 +1,4 @@
+# <pcluster size> <regex>; a size of 0 stores matching files uncompressed.
+# APEX files are loop-mounted: kept flat, the loop device can read them
+# with direct I/O instead of caching every block twice.
+0 \.apex$

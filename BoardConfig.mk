@@ -110,6 +110,7 @@ BOARD_SYSTEMIMAGE_FILE_SYSTEM_TYPE := erofs
 # The 4.9 EROFS backport reads LZ4 only, 4 KiB blocks, without dedupe,
 # fragments or tail packing
 BOARD_EROFS_COMPRESSOR := lz4hc,9
+BOARD_SYSTEMIMAGE_EROFS_COMPRESS_HINTS := $(DEVICE_PATH)/configs/erofs_compress_hints.txt
 
 # RIL
 ENABLE_VENDOR_RIL_SERVICE := true
