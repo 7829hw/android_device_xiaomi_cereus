@@ -6,10 +6,10 @@
 # 1 "<built-in>" 2
 # 1 "vendor/mediatek/proprietary/hardware/fstab/mt6765/fstab.in.mt6765" 2
 # 124 "vendor/mediatek/proprietary/hardware/fstab/mt6765/fstab.in.mt6765"
-/dev/block/platform/bootdevice/by-name/system /system erofs ro wait,,avb=vbmeta,first_stage_mount
+/dev/block/platform/bootdevice/by-name/system /system erofs ro,cache_strategy=disabled wait,,avb=vbmeta,first_stage_mount
 /dev/block/platform/bootdevice/by-name/system /system ext4 ro wait,,avb=vbmeta,first_stage_mount
 
-/dev/block/platform/bootdevice/by-name/vendor /vendor erofs ro wait,,avb,first_stage_mount
+/dev/block/platform/bootdevice/by-name/vendor /vendor erofs ro,cache_strategy=disabled wait,,avb,first_stage_mount
 /dev/block/platform/bootdevice/by-name/vendor /vendor ext4 ro wait,,avb,first_stage_mount
 /dev/block/platform/bootdevice/by-name/metadata /metadata ext4 noatime,nosuid,nodev,discard wait,check,formattable,first_stage_mount
 # 140 "vendor/mediatek/proprietary/hardware/fstab/mt6765/fstab.in.mt6765"
